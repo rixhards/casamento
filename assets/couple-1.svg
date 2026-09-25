@@ -1,0 +1,16 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1100" fill="#F7EEE8" />
+  <rect x="48" y="48" width="804" height="1004" rx="46" fill="url(#paint0_linear)" />
+  <circle cx="210" cy="246" r="164" fill="#F7D4CF" fill-opacity="0.5" />
+  <circle cx="694" cy="844" r="206" fill="#F4E6D9" fill-opacity="0.26" />
+  <path d="M170 740C278 620 360 584 448 584C536 584 634 628 744 770" stroke="#FFF4EC" stroke-width="24" stroke-linecap="round" />
+  <text x="88" y="126" fill="#FFF6EF" font-family="Georgia, serif" font-size="40">Ana &amp; Richard</text>
+  <text x="88" y="182" fill="#FFF6EF" font-family="Georgia, serif" font-size="72">Nossa foto 01</text>
+  <text x="88" y="954" fill="#FFF6EF" font-family="Georgia, serif" font-size="34">Troque por uma imagem especial do casal</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="48" y1="48" x2="852" y2="1052" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C7747B" />
+      <stop offset="1" stop-color="#743545" />
+    </linearGradient>
+  </defs>
+</svg>

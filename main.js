@@ -438,6 +438,10 @@ const montarRsvp = async () => {
             definirStatus("#rsvp-search-status", "", "neutro");
             return;
         }
+        if (nome.replace(/\s+/g, " ").length < 3) {
+            definirStatus("#rsvp-search-status", "Digite pelo menos 3 letras do seu nome ou sobrenome.", "neutro");
+            return;
+        }
         const versao = versaoBusca;
         campoNome.setAttribute("aria-busy", "true");
         definirStatus("#rsvp-search-status", "Buscando nomes…", "neutro");
@@ -458,8 +462,8 @@ const montarRsvp = async () => {
             sugestoes.hidden = resultados.length === 0;
             campoNome.setAttribute("aria-expanded", String(resultados.length > 0));
             definirStatus("#rsvp-search-status", resultados.length
-                ? resultados.length === 20
-                    ? "Mostrando até 20 nomes. Continue digitando para refinar ou selecione seu nome na lista."
+                ? resultados.length === 8
+                    ? "Mostrando até 8 nomes. Continue digitando para refinar ou selecione seu nome na lista."
                     : "Selecione seu nome na lista para abrir o convite da sua família."
                 : "Não encontramos esse nome. Tente seu sobrenome ou o nome de um familiar.", "neutro");
         }

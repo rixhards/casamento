@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Confirmações | Ana &amp; Richard</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="module" src="./admin.js"></script>
+</head>
+<body>
+  <main class="admin-page">
+    <a href="./">← Site do casamento</a>
+    <p class="eyebrow">Ana &amp; Richard · 07.11.2026</p>
+    <h1>Confirmações de presença</h1>
+    <form id="admin-login" class="panel form-grid">
+      <p class="form-grid__full">Acesso do casal</p>
+      <label>E-mail<input id="admin-email" type="email" autocomplete="username" required /></label>
+      <label>Senha<input id="admin-password" type="password" autocomplete="current-password" required /></label>
+      <button class="button button--solid" type="submit">Entrar</button>
+    </form>
+    <p id="admin-status" class="status-message" role="status" aria-live="polite"></p>
+    <section id="admin-panel" hidden>
+      <div class="admin-actions">
+        <button id="admin-refresh" class="button button--solid" type="button">Atualizar</button>
+        <button id="admin-export" class="button button--ghost" type="button">Baixar lista CSV</button>
+        <button id="admin-logout" class="button button--ghost" type="button">Sair</button>
+      </div>
+      <p id="admin-updated"></p>
+      <div id="admin-summary" class="admin-summary"></div>
+      <p id="admin-capacity" role="status"></p>
+      <p>Menores de 6 anos ficam fora do limite de 180. Idades são as do dia do casamento; enquanto houver dúvida, a pessoa conta no limite. O total inclui respostas de todos os convites.</p>
+      <div class="form-grid panel">
+        <label>Buscar pessoa ou família<input id="admin-search" type="search" /></label>
+        <label>Resposta<select id="admin-filter" aria-label="Resposta">
+          <option value="">Todas</option><option value="vai">Vai</option>
+          <option value="nao vai">Não vai</option><option value="sem resposta">Sem resposta</option>
+          <option value="idade">Idade a conferir</option>
+        </select></label>
+      </div>
+      <p id="admin-results" aria-live="polite"></p>
+      <div class="admin-table-scroll" tabindex="0" role="region" aria-label="Lista de convidados">
+        <table class="admin-table">
+          <thead><tr><th>Família</th><th>Convidado</th><th>Idade</th><th>Conta no limite</th><th>Resposta</th><th>Última resposta</th></tr></thead>
+          <tbody id="admin-rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

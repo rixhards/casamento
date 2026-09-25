@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#faf6f1" />
+
+  <title>Ana &amp; Richard | 07 de novembro de 2026</title>
+  <meta name="description"
+    content="Ana e Richard vão casar em 07 de novembro de 2026, às 20h, em Porto Alegre. Confirme sua presença, veja os locais e deixe um recado." />
+
+  <!-- Preview do link (WhatsApp, Instagram, iMessage) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Ana &amp; Richard" />
+  <meta property="og:title" content="Ana &amp; Richard vão casar!" />
+  <meta property="og:description"
+    content="07 de novembro de 2026, às 20h, em Porto Alegre. Abra para confirmar sua presença." />
+  <meta property="og:url" content="https://rixhards.github.io/casamento/" />
+  <meta property="og:image" content="https://rixhards.github.io/casamento/assets/og-preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Brasão A&amp;R — Ana e Richard, 07 de novembro de 2026" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="canonical" href="https://rixhards.github.io/casamento/" />
+  <link rel="icon" href="./assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="./assets/favicon-64.png" sizes="64x64" type="image/png" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="module" src="./main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ana e Richard — ir para o início">
+      <picture>
+        <source srcset="./assets/brasao-main.webp" type="image/webp" />
+        <img class="brand__brasao" src="./assets/brasao-main.png" alt="" width="42" height="63" />
+      </picture>
+      <span class="brand__names">Ana &amp; Richard</span>
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#rsvp">Confirmação</a>
+      <a href="#informacoes">Informações</a>
+      <a href="#locais">Locais</a>
+      <a href="#historia">História</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#presentes">Presentes</a>
+      <a href="#recados">Recados</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero__content">
+        <picture>
+          <source srcset="./assets/brasao-hero.webp" type="image/webp" />
+          <img class="hero__brasao" src="./assets/brasao-hero.png" alt="Brasão do casamento de Ana e Richard"
+            width="134" height="120" fetchpriority="high" />
+        </picture>
+
+        <p class="eyebrow" id="hero-date">07 de novembro de 2026 · 20h · Porto Alegre — RS</p>
+        <h1>Ana &amp; Richard</h1>
+        <p class="hero__lead">
+          Um amor que nasceu de uma amizade, cresceu nas adversidades e agora
+          se celebra no altar. Sejam bem-vindos ao nosso grande dia.
+        </p>
+
+        <div class="countdown" aria-label="Contagem regressiva para o casamento">
+          <div class="countdown__item"><strong id="days">000</strong><span>dias</span></div>
+          <div class="countdown__item"><strong id="hours">00</strong><span>horas</span></div>
+          <div class="countdown__item"><strong id="minutes">00</strong><span>min</span></div>
+          <div class="countdown__item"><strong id="seconds">00</strong><span>seg</span></div>
+        </div>
+
+        <div class="hero__actions">
+          <a class="button button--solid" href="#rsvp">Confirmar presença</a>
+          <a class="button button--ghost" href="#informacoes">Informações do dia</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RSVP ============ -->
+    <section class="rsvp section" id="rsvp">
+      <div class="section__heading">
+        <p class="eyebrow">Confirmação de presença</p>
+        <h2>Vocês vêm?</h2>
+      </div>
+
+      <div class="rsvp-flow panel" id="rsvp-flow">
+
+        <div class="rsvp-step" id="rsvp-carregando">
+          <p class="rsvp-loading">Carregando seu convite…</p>
+        </div>
+
+        <div class="rsvp-step rsvp-step--hidden" id="rsvp-busca">
+          <h3 class="rsvp-confirm__title">Encontre seu convite</h3>
+          <p>Comece a digitar seu nome e selecione na lista. Depois, você pode responder por toda a família.</p>
+          <form id="rsvp-search-form" class="form-grid">
+            <div class="form-grid__full rsvp-autocomplete">
+              <label for="rsvp-name">Seu nome</label>
+              <input id="rsvp-name" name="nome" type="text" autocomplete="off" maxlength="160" required
+                placeholder="Comece pelo seu nome ou sobrenome" role="combobox" aria-autocomplete="list"
+                aria-expanded="false" aria-controls="rsvp-suggestions" aria-describedby="rsvp-search-status" />
+              <ul id="rsvp-suggestions" class="rsvp-suggestions" role="listbox" aria-label="Nomes encontrados" hidden></ul>
+            </div>
+            <div class="form-grid__full">
+              <button class="button button--solid" type="submit">Buscar nomes</button>
+              <p id="rsvp-search-status" class="status-message" aria-live="polite"></p>
+            </div>
+          </form>
+          <p class="rsvp-hint">Não encontrou? Tente seu sobrenome ou o nome de um familiar, ou fale com a gente pelo WhatsApp.</p>
+        </div>
+
+        <div class="rsvp-step rsvp-step--hidden" id="rsvp-erro">
+          <h3 class="rsvp-confirm__title">Não deu certo</h3>
+          <p class="status-message is-error" id="rsvp-erro-msg" aria-live="polite"></p>
+          <p class="rsvp-hint">Se continuar assim, chama a gente no WhatsApp.</p>
+          <button class="button button--ghost" id="rsvp-retry" type="button">Buscar pelo nome</button>
+        </div>
+
+        <div class="rsvp-step rsvp-step--hidden" id="rsvp-confirm">
+          <h3 class="rsvp-confirm__title" id="rsvp-family-title" tabindex="-1"></h3>
+          <p class="rsvp-summary" id="rsvp-summary" aria-live="polite"></p>
+          <div class="rsvp-member-list" id="rsvp-member-list"></div>
+          <p class="status-message" id="rsvp-saved-msg" aria-live="polite"></p>
+          <p class="rsvp-hint">
+            Responda por cada pessoa acima. Pode mudar de ideia — é só voltar ao site, buscar seu nome e trocar a resposta.
+          </p>
+          <button class="button button--ghost" id="rsvp-change" type="button">Buscar outro convite</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ INFORMAÇÕES ============ -->
+    <section class="info section" id="informacoes">
+      <div class="section__heading">
+        <p class="eyebrow">O dia</p>
+        <h2>O que você precisa saber</h2>
+      </div>
+      <div class="info-grid" id="info-grid"></div>
+    </section>
+
+    <!-- ============ LOCAIS ============ -->
+    <section class="venues section" id="locais">
+      <div class="section__heading">
+        <p class="eyebrow">Locais</p>
+        <h2>Cerimônia e recepção</h2>
+      </div>
+      <div class="venue-grid" id="venue-grid"></div>
+    </section>
+
+    <!-- ============ HISTÓRIA ============ -->
+    <section class="story section" id="historia">
+      <div class="section__heading">
+        <p class="eyebrow">Nossa história</p>
+        <h2>Do encontro ao altar</h2>
+      </div>
+
+      <div class="story__timeline">
+        <article class="story__chapter">
+          <div class="story__year">2022</div>
+          <div class="story__body">
+            <h3>O começo de tudo</h3>
+            <p>
+              A gente se conheceu em Porto Alegre, num projeto do Instituto
+              Caldeira. Virou amizade no primeiro dia — e não demorou muito pra
+              virar outra coisa.
+            </p>
+            <p>
+              Nosso primeiro encontro foi no Shopping Iguatemi, pra ver
+              <em>Avatar: O Caminho da Água</em>. E o primeiro beijo? Antes do
+              filme começar, claro — vai que a gente perde uma cena boa, né?
+            </p>
+          </div>
+        </article>
+
+        <article class="story__chapter">
+          <div class="story__year">2023</div>
+          <div class="story__body">
+            <h3>O namoro</h3>
+            <p>
+              Ficamos umas duas, três semanas até que no dia 2 de fevereiro de
+              2023 veio o pedido de namoro. Quem pediu quem? Até hoje a gente
+              discute isso — mas o que importa é que os dois disseram "sim".
+            </p>
+            <p>
+              Desde cedo já existia aquele papo sobre futuro, sobre construir
+              algo junto de verdade. E o primeiro ano foi exatamente isso:
+              aprender a caminhar lado a lado.
+            </p>
+          </div>
+        </article>
+
+        <article class="story__chapter">
+          <div class="story__year">2024</div>
+          <div class="story__body">
+            <h3>Amadurecendo juntos</h3>
+            <p>
+              Em fevereiro, comemoramos 1 ano com a primeira viagem a dois —
+              Gramado, RS. Foi incrível. Como todo casal, enfrentamos nossos
+              desafios ao longo do ano, mas cada um deles só deixou a gente
+              mais forte e mais certo do que sentia.
+            </p>
+          </div>
+        </article>
+
+        <article class="story__chapter">
+          <div class="story__year">2025</div>
+          <div class="story__body">
+            <h3>A decisão</h3>
+            <p>
+              Novos empregos, novos projetos, mais conquistas. Richard na
+              programação, Ana no marketing digital — cada um crescendo, mas
+              sempre junto.
+            </p>
+            <p>
+              Foi nesse ano que decidimos: era hora de casar. Queríamos dar
+              esse passo com a família por perto e começar oficialmente a
+              construir o nosso lar.
+            </p>
+          </div>
+        </article>
+
+        <article class="story__chapter">
+          <div class="story__year">2026</div>
+          <div class="story__body">
+            <h3>O grande dia se aproxima</h3>
+            <p>
+              E cá estamos! Ansiosos, emocionados e cheios de planos. O
+              casamento é só o começo — e a gente mal pode esperar pra
+              celebrar com vocês.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="story__highlight">
+        <p class="story__quote">
+          "A gente se escolhe todo dia — e cada dia tem mais certeza."
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ FOTOS ============ -->
+    <section class="gallery section" id="fotos">
+      <div class="section__heading">
+        <p class="eyebrow">Fotos do casal</p>
+        <h2>Memórias em destaque</h2>
+      </div>
+
+      <div class="carousel" id="carousel" tabindex="0" role="group" aria-roledescription="carrossel"
+        aria-label="Fotos do casal — use as setas do teclado para navegar">
+        <div class="carousel__stage">
+          <img id="carousel-image" src="./assets/couple-1.svg" alt="" decoding="async" />
+          <div class="carousel__caption">
+            <h3 id="carousel-title">Richard &amp; Ana</h3>
+            <p id="carousel-description"></p>
+          </div>
+        </div>
+
+        <div class="carousel__controls">
+          <button class="carousel__arrow" id="prev-slide" type="button" aria-label="Foto anterior">←</button>
+          <div class="carousel__thumbs" id="carousel-thumbs"></div>
+          <button class="carousel__arrow" id="next-slide" type="button" aria-label="Próxima foto">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRESENTES ============ -->
+    <section class="gifts section" id="presentes">
+      <div class="section__heading">
+        <p class="eyebrow">Lista de presentes</p>
+        <h2>Nos ajude a começar</h2>
+      </div>
+
+      <div class="section__intro">
+        <p>
+          Não temos lista em loja. Escolha abaixo o presente com a cara de
+          vocês, mande um Pix do valor que quiser e pronto — a gente cuida do
+          resto. O valor sugerido é só sugestão mesmo.
+        </p>
+      </div>
+
+      <div class="gift-grid" id="gift-grid"></div>
+    </section>
+
+    <!-- ============ RECADOS ============ -->
+    <section class="messages section" id="recados">
+      <div class="section__heading">
+        <p class="eyebrow">Recados</p>
+        <h2>Deixe uma mensagem para o casal</h2>
+      </div>
+
+      <div class="messages__layout">
+        <div>
+          <form class="panel form-grid" id="message-form">
+            <p class="form-grid__full">Todo mundo pode deixar um carinho por aqui. Assine com seu nome ou com o apelido que usa com a gente. 💛</p>
+            <label>
+              Seu nome ou apelido
+              <input id="message-name" name="messageName" type="text" autocomplete="name"
+                placeholder="Seu nome ou apelido carinhoso" maxlength="60" required />
+            </label>
+
+            <label class="form-grid__full">
+              Recado
+              <textarea id="message-text" name="messageText" rows="5"
+                placeholder="Escreva uma mensagem carinhosa para o casal." maxlength="600" required></textarea>
+              <span class="form-counter" id="message-counter" aria-hidden="true"></span>
+            </label>
+
+            <div class="form-grid__full form-actions">
+              <button class="button button--solid" type="submit">Enviar recado</button>
+              <p class="status-message" id="message-status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="message-wall" id="message-wall"></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <picture>
+        <source srcset="./assets/brasao-main.webp" type="image/webp" />
+        <img class="footer__brasao" src="./assets/brasao-main.png" alt="" width="64" height="96" loading="lazy" />
+      </picture>
+      <p>Ana &amp; Richard · 07.11.2026</p>
+      <p class="footer__tagline">Feito com amor em Porto Alegre ♥</p>
+    </footer>
+  </main>
+
+  <!-- ============ MODAL DO PIX ============ -->
+  <dialog class="pix-modal" id="pix-modal" aria-labelledby="pix-modal-title">
+    <div class="pix-modal__box">
+      <button class="pix-modal__close" id="pix-modal-close" type="button" aria-label="Fechar">✕</button>
+
+      <h3 id="pix-modal-title"></h3>
+      <p class="pix-modal__description" id="pix-modal-description"></p>
+      <p class="pix-modal__value" id="pix-modal-value"></p>
+
+      <img class="pix-modal__qr" id="pix-qr" src="" alt="QR Code do Pix para presentear o casal" width="240"
+        height="240" />
+
+      <p class="pix-modal__label">Ou copie a chave Pix:</p>
+      <code class="pix-modal__key" id="pix-key"></code>
+
+      <button class="button button--solid" id="pix-copy" type="button">Copiar chave Pix</button>
+      <p class="status-message" id="pix-copy-status" aria-live="polite"></p>
+    </div>
+  </dialog>
+</body>
+
+</html>

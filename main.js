@@ -170,16 +170,23 @@ const desenharCarrossel = () => {
         return;
     const foto = FOTOS[indiceFoto];
     palco.src = foto.imagem;
-    palco.alt = foto.titulo;
+    palco.alt = foto.descricao ? `${foto.titulo} — ${foto.descricao}` : foto.titulo;
     titulo.textContent = foto.titulo;
     descricao.textContent = foto.descricao;
+    descricao.hidden = !foto.descricao;
+    // Fundo desfocado com a própria foto, para fotos em pé não deixarem faixas vazias.
+    $("#carousel-frame")?.style.setProperty("--fundo-foto", `url("${foto.miniatura}")`);
+    // Já baixa a próxima foto para a troca ficar instantânea.
+    const proxima = FOTOS[(indiceFoto + 1) % FOTOS.length];
+    if (proxima)
+        new Image().src = proxima.imagem;
     miniaturas.replaceChildren(...FOTOS.map((item, indice) => {
         const botao = el("button", {
             type: "button",
             class: `carousel__thumb${indice === indiceFoto ? " is-active" : ""}`,
             "aria-label": `Ver foto ${indice + 1} de ${FOTOS.length}`,
             "aria-current": indice === indiceFoto ? "true" : "false"
-        }, el("img", { src: item.imagem, alt: "", loading: "lazy", decoding: "async" }));
+        }, el("img", { src: item.miniatura, alt: "", loading: "lazy", decoding: "async" }));
         botao.addEventListener("click", () => {
             indiceFoto = indice;
             desenharCarrossel();
@@ -187,6 +194,9 @@ const desenharCarrossel = () => {
         });
         return botao;
     }));
+    const ativa = miniaturas.children[indiceFoto];
+    if (ativa)
+        miniaturas.scrollTo({ left: ativa.offsetLeft - (miniaturas.clientWidth - ativa.clientWidth) / 2, behavior: semMovimento() ? "auto" : "smooth" });
 };
 const girarFoto = (direcao) => {
     indiceFoto = (indiceFoto + direcao + FOTOS.length) % FOTOS.length;
@@ -364,7 +374,11 @@ const desenharConvite = (dados) => {
                     atualizarResumo();
                     definirStatus("#rsvp-saved-msg", `${membro.nome}: ${valor ? "presença confirmada" : "ausência registrada"}.`, "sucesso");
                 }
-                catch {
+                catch (erro) {
+                    if (String(erro).includes("prazo_encerrado")) {
+                        mostrarEtapaRsvp("rsvp-encerrado");
+                        return;
+                    }
                     definirStatus("#rsvp-saved-msg", "Não consegui salvar. Verifique a internet e tente de novo.", "erro");
                 }
                 finally {
@@ -554,6 +568,13 @@ const montarRsvp = async () => {
     };
     $("#rsvp-change")?.addEventListener("click", abrirBusca);
     $("#rsvp-retry")?.addEventListener("click", abrirBusca);
+    if (Date.now() > new Date(CASAMENTO.prazoConfirmacao).getTime()) {
+        const prazo = $(".rsvp-deadline");
+        if (prazo)
+            prazo.textContent = "As confirmações de presença estão encerradas.";
+        mostrarEtapaRsvp("rsvp-encerrado");
+        return;
+    }
     tokenConvite = lerToken();
     if (!tokenConvite) {
         mostrarEtapaRsvp("rsvp-busca");

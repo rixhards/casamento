@@ -13,6 +13,19 @@
 .admin-table th, .admin-table td { padding: 12px; border-bottom: 1px solid #d8ccd8; }
 .admin-page select { font: inherit; padding: 12px; border-radius: 8px; width: 100%; }
 .rsvp-toggle:disabled { opacity: .6; cursor: wait; }
+.admin-summary .admin-card--vai { background: #e6f4eb; }
+.admin-summary .admin-card--vai strong { color: #1f6b43; }
+.admin-summary .admin-card--nao-vai { background: #fbe8ec; }
+.admin-summary .admin-card--nao-vai strong { color: #8f2c40; }
+.admin-summary .admin-card--sem-resposta strong { color: #5d5268; }
+.admin-row--vai { background: rgba(63, 157, 107, 0.08); }
+.admin-row--nao-vai { background: rgba(194, 86, 107, 0.08); }
+.admin-badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: .88rem; font-weight: 600; white-space: nowrap; }
+.admin-badge--vai { background: #dcf1e4; color: #1f6b43; }
+.admin-badge--nao-vai { background: #f8dde2; color: #8f2c40; }
+.admin-badge--sem-resposta { background: #ece7f0; color: #5d5268; }
+.rsvp-deadline { margin: 1rem 0 0; color: var(--muted); font-size: 1.05rem; }
+.rsvp-deadline strong { color: var(--accent-dark); }
 
 :root {
   --bg: #faf6f1;

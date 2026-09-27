@@ -21,7 +21,7 @@ export const INFORMACOES = [
     {
         icone: "clock",
         titulo: "Horário",
-        texto: "A cerimônia começa às 20h, no horário de Brasília. Chegue uns 20 minutos antes para escolher o lugar com calma."
+        texto: "A cerimônia começa às 20h, no horário de Brasília. Chegue com 30 minutos de antecedência para escolher o lugar com calma."
     },
     {
         icone: "dress",

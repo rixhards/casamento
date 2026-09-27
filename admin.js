@@ -4,7 +4,6 @@ const campo = (id) => document.getElementById(id);
 const status = (texto) => { campo("admin-status").textContent = texto; };
 const normalizar = (v) => v.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
 const resposta = (v) => v === "nao vai" ? "Não vai" : v === "vai" ? "Vai" : "Sem resposta";
-const idade = (p) => p.idade_pendente ? "A conferir" : p.idade === null ? "—" : `${p.idade} anos`;
 const data = (v) => v ? new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short", timeZone: "America/Sao_Paulo" }).format(new Date(v)) : "—";
 let acesso = null; // Só na memória desta aba; nunca no URL ou localStorage.
 let painel = { limite: 180, convidados: [] };
@@ -14,25 +13,20 @@ const selecionados = () => {
     const busca = normalizar(campo("admin-search").value);
     const filtro = campo("admin-filter").value;
     return painel.convidados.filter((p) => normalizar(`${p.nome} ${p.familia}`).includes(busca) &&
-        (!filtro || (filtro === "idade" ? p.idade_pendente : p.status === filtro)));
+        (!filtro || p.status === filtro));
 };
 const desenhar = () => {
     const pessoas = painel.convidados;
-    const contados = pessoas.filter((p) => p.conta_no_limite);
-    const confirmados = contados.filter((p) => p.status === "vai").length;
+    const confirmados = pessoas.filter((p) => p.status === "vai").length;
     const cards = [
-        ["Convidados cadastrados", pessoas.length],
-        ["Lista que conta no limite", `${contados.length} / ${painel.limite}`],
-        ["Presenças que contam no limite", `${confirmados} / ${painel.limite}`],
-        ["Presenças totais", pessoas.filter((p) => p.status === "vai").length],
-        ["Menores de 6 confirmados", pessoas.filter((p) => !p.conta_no_limite && p.status === "vai").length],
-        ["Não vão", pessoas.filter((p) => p.status === "nao vai").length],
-        ["Sem resposta", pessoas.filter((p) => p.status === "sem resposta").length],
-        ["Idades a conferir", pessoas.filter((p) => p.idade_pendente).length]
+        ["Convidados na lista", pessoas.length, ""],
+        ["Confirmados", `${confirmados} / ${painel.limite}`, "vai"],
+        ["Não vão", pessoas.filter((p) => p.status === "nao vai").length, "nao-vai"],
+        ["Sem resposta", pessoas.filter((p) => p.status === "sem resposta").length, "sem-resposta"]
     ];
-    campo("admin-summary").replaceChildren(...cards.map(([rotulo, valor]) => {
+    campo("admin-summary").replaceChildren(...cards.map(([rotulo, valor, tom]) => {
         const card = document.createElement("article");
-        card.className = "panel";
+        card.className = tom ? `panel admin-card--${tom}` : "panel";
         const numero = document.createElement("strong");
         numero.textContent = String(valor);
         const label = document.createElement("p");
@@ -40,18 +34,28 @@ const desenhar = () => {
         card.append(numero, label);
         return card;
     }));
-    campo("admin-capacity").textContent = contados.length > painel.limite
-        ? `Atenção: a lista está ${contados.length - painel.limite} pessoa(s) acima do limite. As respostas continuam sendo registradas.`
-        : `A lista tem ${painel.limite - contados.length} vaga(s) disponíveis no limite de ${painel.limite}.`;
+    campo("admin-capacity").textContent = confirmados > painel.limite
+        ? `Atenção: já são ${confirmados - painel.limite} confirmado(s) acima do limite de ${painel.limite}.`
+        : "";
     const filtrados = selecionados();
     campo("admin-results").textContent = `${filtrados.length} pessoa(s) nesta seleção. O CSV usa os mesmos filtros.`;
     campo("admin-rows").replaceChildren(...filtrados.map((p) => {
         const linha = document.createElement("tr");
-        for (const valor of [p.familia, p.nome, idade(p), p.conta_no_limite ? "Sim" : "Não", resposta(p.status), data(p.atualizado_em)]) {
+        const tom = p.status.replace(" ", "-");
+        linha.className = `admin-row--${tom}`;
+        for (const valor of [p.familia, p.nome]) {
             const celula = document.createElement("td");
             celula.textContent = valor;
             linha.append(celula);
         }
+        const celulaResposta = document.createElement("td");
+        const selo = document.createElement("span");
+        selo.className = `admin-badge admin-badge--${tom}`;
+        selo.textContent = resposta(p.status);
+        celulaResposta.append(selo);
+        const celulaData = document.createElement("td");
+        celulaData.textContent = data(p.atualizado_em);
+        linha.append(celulaResposta, celulaData);
         return linha;
     }));
 };
@@ -135,8 +139,8 @@ campo("admin-search").addEventListener("input", desenhar);
 campo("admin-filter").addEventListener("change", desenhar);
 campo("admin-export").addEventListener("click", () => {
     const csv = (v) => `"${(/^[=+@\-\t\r]/.test(v) ? "'" + v : v).replaceAll('"', '""')}"`;
-    const linhas = [["Família", "Convidado", "Idade", "Conta no limite", "Resposta", "Atualizado em"],
-        ...selecionados().map((p) => [p.familia, p.nome, idade(p), p.conta_no_limite ? "Sim" : "Não", resposta(p.status), data(p.atualizado_em)])];
+    const linhas = [["Família", "Convidado", "Resposta", "Atualizado em"],
+        ...selecionados().map((p) => [p.familia, p.nome, resposta(p.status), data(p.atualizado_em)])];
     const url = URL.createObjectURL(new Blob(["\uFEFF" + linhas.map((l) => l.map(csv).join(",")).join("\r\n")], { type: "text/csv;charset=utf-8" }));
     const a = document.createElement("a");
     a.href = url;

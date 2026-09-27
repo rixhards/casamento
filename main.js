@@ -454,8 +454,16 @@ const montarRsvp = async () => {
                 const opcao = el("li", {
                     id: `rsvp-option-${indice}`, class: "rsvp-suggestion", role: "option", "aria-selected": "false"
                 }, el("strong", {}, resultado.nome), el("span", { class: "rsvp-suggestion__family" }, resultado.familia));
-                // Mantém o foco no combobox até a seleção por mouse ou toque terminar.
-                opcao.addEventListener("pointerdown", (evento) => evento.preventDefault());
+                // Mantém o foco no combobox até a seleção por mouse terminar.
+                opcao.addEventListener("mousedown", (evento) => evento.preventDefault());
+                // No celular o toque fecha o teclado e tira o foco do campo antes do "click";
+                // por isso o toque seleciona já no pointerup (arrastar para rolar a lista gera pointercancel).
+                opcao.addEventListener("pointerup", (evento) => {
+                    if (evento.pointerType !== "mouse") {
+                        evento.preventDefault();
+                        void selecionar(resultado);
+                    }
+                });
                 opcao.addEventListener("click", () => { void selecionar(resultado); });
                 return opcao;
             }));
@@ -488,7 +496,11 @@ const montarRsvp = async () => {
         if (campoNome.value.trim() && !abrindoConvite)
             void pesquisar();
     });
-    campoNome.addEventListener("blur", fecharSugestoes);
+    // Fecha com atraso para não sumir com a lista antes de o toque na sugestão ser processado.
+    campoNome.addEventListener("blur", () => {
+        window.setTimeout(() => { if (document.activeElement !== campoNome && !abrindoConvite)
+            fecharSugestoes(); }, 250);
+    });
     campoNome.addEventListener("keydown", (evento) => {
         if (evento.isComposing)
             return;

@@ -1,4 +1,4 @@
-import { CASAMENTO, FOTOS, INFORMACOES, LOCAIS, PIX, PRESENTES } from "./config.js";
+import { CASAMENTO, FOTOS, FOTOS_TEXTO, INFORMACOES, LOCAIS, PIX, PRESENTES } from "./config.js";
 import { buscarConvite, sugerirConvidados, listarRecados, publicarRecado, salvarConfirmacao, supabaseConfigurado } from "./supabase.js";
 /* =========================================================
    Utilidades
@@ -170,10 +170,9 @@ const desenharCarrossel = () => {
         return;
     const foto = FOTOS[indiceFoto];
     palco.src = foto.imagem;
-    palco.alt = foto.descricao ? `${foto.titulo} — ${foto.descricao}` : foto.titulo;
-    titulo.textContent = foto.titulo;
-    descricao.textContent = foto.descricao;
-    descricao.hidden = !foto.descricao;
+    palco.alt = `Foto de Ana e Richard, ${indiceFoto + 1} de ${FOTOS.length}`;
+    titulo.textContent = FOTOS_TEXTO.titulo;
+    descricao.textContent = FOTOS_TEXTO.texto;
     // Fundo desfocado com a própria foto, para fotos em pé não deixarem faixas vazias.
     $("#carousel-frame")?.style.setProperty("--fundo-foto", `url("${foto.miniatura}")`);
     // Já baixa a próxima foto para a troca ficar instantânea.

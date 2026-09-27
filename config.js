@@ -49,8 +49,8 @@ export const LOCAIS = [
         endereco: "Av. Assis Brasil, 6400 — Sarandi, Porto Alegre — RS",
         horario: "20h",
         nota: "Cerimônia religiosa. Não há estacionamento próprio: as ruas do entorno costumam ter vaga.",
-        imagem: "./assets/venue-church.webp",
-        imagemFallback: "./assets/venue-church.jpg",
+        imagem: "./assets/venue-church.webp?v=bc44319c",
+        imagemFallback: "./assets/venue-church.jpg?v=06534c0f",
         mapa: "Paróquia São José, Av. Assis Brasil, 6400 - Sarandi, Porto Alegre - RS, 91140-000"
     },
     {
@@ -60,9 +60,10 @@ export const LOCAIS = [
         endereco: "Av. Pres. Getúlio Vargas, 5436 — Alvorada — RS",
         horario: "logo após a cerimônia",
         nota: "É onde a festa acontece de verdade.",
-        imagem: "./assets/venue-party.webp",
-        imagemFallback: "./assets/venue-party.jpg",
-        mapa: "Exxplêndido Festas e Eventos, Av. Pres. Getúlio Vargas, 5436 - Alvorada - RS"
+        imagem: "./assets/venue-party.webp?v=6152c030",
+        imagemFallback: "./assets/venue-party.jpg?v=c6a67538",
+        // Nome e número exatamente como estão no Google Maps, para o pino cair no salão certo.
+        mapa: "Exxplendido eventos, Av. Pres. Getúlio Vargas, 5430 - Maria Regina, Alvorada - RS"
     }
 ];
 /* ---------- Presentes ---------- */
@@ -71,7 +72,7 @@ export const PIX = {
     /** Como aparece no app de quem paga. Máx. 25 caracteres, sem acento. */
     recebedor: "RICHARD RODRIGUES",
     cidade: "PORTO ALEGRE",
-    qrcode: "./assets/pix-qrcode.svg"
+    qrcode: "./assets/pix-qrcode.svg?v=c9e2fa57"
 };
 /** Valores são sugestão — o Pix é livre, quem quiser manda o que puder. */
 export const PRESENTES = [
@@ -144,252 +145,252 @@ export const FOTOS = [
         // IMG_0003 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0003.webp",
-        miniatura: "./assets/fotos/mini/foto-0003.webp"
+        imagem: "./assets/fotos/foto-0003.webp?v=d44427f1",
+        miniatura: "./assets/fotos/mini/foto-0003.webp?v=440c924e"
     },
     {
         // IMG_0007 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0007.webp",
-        miniatura: "./assets/fotos/mini/foto-0007.webp"
+        imagem: "./assets/fotos/foto-0007.webp?v=a23bc0d2",
+        miniatura: "./assets/fotos/mini/foto-0007.webp?v=a4350b62"
     },
     {
         // IMG_0019 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0019.webp",
-        miniatura: "./assets/fotos/mini/foto-0019.webp"
+        imagem: "./assets/fotos/foto-0019.webp?v=c3328347",
+        miniatura: "./assets/fotos/mini/foto-0019.webp?v=6dfbd598"
     },
     {
         // IMG_0053 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0053.webp",
-        miniatura: "./assets/fotos/mini/foto-0053.webp"
+        imagem: "./assets/fotos/foto-0053.webp?v=83b7a486",
+        miniatura: "./assets/fotos/mini/foto-0053.webp?v=3db9d6ea"
     },
     {
         // IMG_0205 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0205.webp",
-        miniatura: "./assets/fotos/mini/foto-0205.webp"
+        imagem: "./assets/fotos/foto-0205.webp?v=8c65c638",
+        miniatura: "./assets/fotos/mini/foto-0205.webp?v=0452a60b"
     },
     {
         // IMG_0240 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0240.webp",
-        miniatura: "./assets/fotos/mini/foto-0240.webp"
+        imagem: "./assets/fotos/foto-0240.webp?v=c6ee81cd",
+        miniatura: "./assets/fotos/mini/foto-0240.webp?v=de1b9847"
     },
     {
         // IMG_0257 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0257.webp",
-        miniatura: "./assets/fotos/mini/foto-0257.webp"
+        imagem: "./assets/fotos/foto-0257.webp?v=ea5e248f",
+        miniatura: "./assets/fotos/mini/foto-0257.webp?v=76b70ea7"
     },
     {
         // IMG_0348 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0348.webp",
-        miniatura: "./assets/fotos/mini/foto-0348.webp"
+        imagem: "./assets/fotos/foto-0348.webp?v=8c3f4d9e",
+        miniatura: "./assets/fotos/mini/foto-0348.webp?v=ce83345d"
     },
     {
         // IMG_0354 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0354.webp",
-        miniatura: "./assets/fotos/mini/foto-0354.webp"
+        imagem: "./assets/fotos/foto-0354.webp?v=4b9822c7",
+        miniatura: "./assets/fotos/mini/foto-0354.webp?v=528ea809"
     },
     {
         // IMG_0447 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0447.webp",
-        miniatura: "./assets/fotos/mini/foto-0447.webp"
+        imagem: "./assets/fotos/foto-0447.webp?v=9e4c9e61",
+        miniatura: "./assets/fotos/mini/foto-0447.webp?v=9ea130ee"
     },
     {
         // IMG_0563 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0563.webp",
-        miniatura: "./assets/fotos/mini/foto-0563.webp"
+        imagem: "./assets/fotos/foto-0563.webp?v=f2931692",
+        miniatura: "./assets/fotos/mini/foto-0563.webp?v=845d3a3d"
     },
     {
         // IMG_0578 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0578.webp",
-        miniatura: "./assets/fotos/mini/foto-0578.webp"
+        imagem: "./assets/fotos/foto-0578.webp?v=497763bb",
+        miniatura: "./assets/fotos/mini/foto-0578.webp?v=03fd5ae2"
     },
     {
         // IMG_0581 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0581.webp",
-        miniatura: "./assets/fotos/mini/foto-0581.webp"
+        imagem: "./assets/fotos/foto-0581.webp?v=76cde3cb",
+        miniatura: "./assets/fotos/mini/foto-0581.webp?v=e56c07f7"
     },
     {
         // IMG_0582 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0582.webp",
-        miniatura: "./assets/fotos/mini/foto-0582.webp"
+        imagem: "./assets/fotos/foto-0582.webp?v=c56846a0",
+        miniatura: "./assets/fotos/mini/foto-0582.webp?v=c9518881"
     },
     {
         // IMG_0594 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0594.webp",
-        miniatura: "./assets/fotos/mini/foto-0594.webp"
+        imagem: "./assets/fotos/foto-0594.webp?v=5237af88",
+        miniatura: "./assets/fotos/mini/foto-0594.webp?v=f00d7612"
     },
     {
         // IMG_0606 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0606.webp",
-        miniatura: "./assets/fotos/mini/foto-0606.webp"
+        imagem: "./assets/fotos/foto-0606.webp?v=a0d6aa56",
+        miniatura: "./assets/fotos/mini/foto-0606.webp?v=8437363d"
     },
     {
         // IMG_0621 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0621.webp",
-        miniatura: "./assets/fotos/mini/foto-0621.webp"
+        imagem: "./assets/fotos/foto-0621.webp?v=d18160f5",
+        miniatura: "./assets/fotos/mini/foto-0621.webp?v=bd4527a3"
     },
     {
         // IMG_0664 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0664.webp",
-        miniatura: "./assets/fotos/mini/foto-0664.webp"
+        imagem: "./assets/fotos/foto-0664.webp?v=2725f731",
+        miniatura: "./assets/fotos/mini/foto-0664.webp?v=a9c60530"
     },
     {
         // IMG_0682 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0682.webp",
-        miniatura: "./assets/fotos/mini/foto-0682.webp"
+        imagem: "./assets/fotos/foto-0682.webp?v=d7a264b5",
+        miniatura: "./assets/fotos/mini/foto-0682.webp?v=215cbe37"
     },
     {
         // IMG_0719 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0719.webp",
-        miniatura: "./assets/fotos/mini/foto-0719.webp"
+        imagem: "./assets/fotos/foto-0719.webp?v=2cbaf04a",
+        miniatura: "./assets/fotos/mini/foto-0719.webp?v=ed799d00"
     },
     {
         // IMG_0750 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0750.webp",
-        miniatura: "./assets/fotos/mini/foto-0750.webp"
+        imagem: "./assets/fotos/foto-0750.webp?v=b8699790",
+        miniatura: "./assets/fotos/mini/foto-0750.webp?v=5b290e94"
     },
     {
         // IMG_0878 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0878.webp",
-        miniatura: "./assets/fotos/mini/foto-0878.webp"
+        imagem: "./assets/fotos/foto-0878.webp?v=03e9c23c",
+        miniatura: "./assets/fotos/mini/foto-0878.webp?v=62651f02"
     },
     {
         // IMG_0907 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0907.webp",
-        miniatura: "./assets/fotos/mini/foto-0907.webp"
+        imagem: "./assets/fotos/foto-0907.webp?v=5433e2de",
+        miniatura: "./assets/fotos/mini/foto-0907.webp?v=52628cc0"
     },
     {
         // IMG_0925 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0925.webp",
-        miniatura: "./assets/fotos/mini/foto-0925.webp"
+        imagem: "./assets/fotos/foto-0925.webp?v=331e3658",
+        miniatura: "./assets/fotos/mini/foto-0925.webp?v=23c3652f"
     },
     {
         // IMG_0930 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0930.webp",
-        miniatura: "./assets/fotos/mini/foto-0930.webp"
+        imagem: "./assets/fotos/foto-0930.webp?v=3beb818b",
+        miniatura: "./assets/fotos/mini/foto-0930.webp?v=805c4a2e"
     },
     {
         // IMG_0950 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0950.webp",
-        miniatura: "./assets/fotos/mini/foto-0950.webp"
+        imagem: "./assets/fotos/foto-0950.webp?v=77704154",
+        miniatura: "./assets/fotos/mini/foto-0950.webp?v=844d54d9"
     },
     {
         // IMG_0955 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0955.webp",
-        miniatura: "./assets/fotos/mini/foto-0955.webp"
+        imagem: "./assets/fotos/foto-0955.webp?v=f3998cf9",
+        miniatura: "./assets/fotos/mini/foto-0955.webp?v=ec46425e"
     },
     {
         // IMG_0983 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0983.webp",
-        miniatura: "./assets/fotos/mini/foto-0983.webp"
+        imagem: "./assets/fotos/foto-0983.webp?v=7f00fe5e",
+        miniatura: "./assets/fotos/mini/foto-0983.webp?v=15f4d130"
     },
     {
         // IMG_0985 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0985.webp",
-        miniatura: "./assets/fotos/mini/foto-0985.webp"
+        imagem: "./assets/fotos/foto-0985.webp?v=ef70f2b6",
+        miniatura: "./assets/fotos/mini/foto-0985.webp?v=362fbd5d"
     },
     {
         // IMG_0986 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-0986.webp",
-        miniatura: "./assets/fotos/mini/foto-0986.webp"
+        imagem: "./assets/fotos/foto-0986.webp?v=56660c95",
+        miniatura: "./assets/fotos/mini/foto-0986.webp?v=529245a4"
     },
     {
         // IMG_1033 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-1033.webp",
-        miniatura: "./assets/fotos/mini/foto-1033.webp"
+        imagem: "./assets/fotos/foto-1033.webp?v=c4ef6222",
+        miniatura: "./assets/fotos/mini/foto-1033.webp?v=9800e61b"
     },
     {
         // IMG_1112 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-1112.webp",
-        miniatura: "./assets/fotos/mini/foto-1112.webp"
+        imagem: "./assets/fotos/foto-1112.webp?v=341f18d6",
+        miniatura: "./assets/fotos/mini/foto-1112.webp?v=abcdd44f"
     },
     {
         // IMG_1123 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-1123.webp",
-        miniatura: "./assets/fotos/mini/foto-1123.webp"
+        imagem: "./assets/fotos/foto-1123.webp?v=5a6f51d8",
+        miniatura: "./assets/fotos/mini/foto-1123.webp?v=f5cad312"
     },
     {
         // IMG_8384 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-8384.webp",
-        miniatura: "./assets/fotos/mini/foto-8384.webp"
+        imagem: "./assets/fotos/foto-8384.webp?v=c9da8f08",
+        miniatura: "./assets/fotos/mini/foto-8384.webp?v=771f96ba"
     },
     {
         // IMG_8907 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-8907.webp",
-        miniatura: "./assets/fotos/mini/foto-8907.webp"
+        imagem: "./assets/fotos/foto-8907.webp?v=e1339f5f",
+        miniatura: "./assets/fotos/mini/foto-8907.webp?v=3edda69b"
     },
     {
         // IMG_9650 (pasta FotosSite)
         titulo: "Ana & Richard",
         descricao: "",
-        imagem: "./assets/fotos/foto-9650.webp",
-        miniatura: "./assets/fotos/mini/foto-9650.webp"
+        imagem: "./assets/fotos/foto-9650.webp?v=3db96695",
+        miniatura: "./assets/fotos/mini/foto-9650.webp?v=261d7c12"
     }
 ];

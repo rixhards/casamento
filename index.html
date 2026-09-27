@@ -74,8 +74,8 @@
       <div class="hero__content">
         <p class="eyebrow" id="hero-date">07 de novembro de 2026 · 20h · Porto Alegre — RS</p>
         <h1 class="hero__title">
-          <img class="hero__logo" src="./assets/logo-ar.svg?v=6f6c7d0e" alt="Ana &amp; Richard"
-            width="254" height="200" fetchpriority="high" />
+          <img class="hero__logo" src="./assets/logo-ar.svg?v=6f6c7d0e" alt="Ana &amp; Richard" width="254" height="200"
+            fetchpriority="high" />
         </h1>
         <p class="hero__lead">
           Um amor que nasceu de uma amizade, cresceu nas adversidades e agora
@@ -100,8 +100,8 @@
     <section class="rsvp section" id="rsvp">
       <div class="section__heading">
         <p class="eyebrow">Confirmação de presença</p>
-        <h2>Contamos com sua presença?</h2>
-        <p class="rsvp-deadline">Confirme sua presença até <strong>15 de outubro de 2026</strong>.</p>
+        <h2>Contamos com você?</h2>
+        <p class="rsvp-deadline">Confirme até <strong>15 de outubro de 2026</strong>.</p>
       </div>
 
       <div class="rsvp-flow panel" id="rsvp-flow">
@@ -119,19 +119,22 @@
               <input id="rsvp-name" name="nome" type="text" autocomplete="off" maxlength="160" required
                 placeholder="Comece pelo seu nome ou sobrenome" role="combobox" aria-autocomplete="list"
                 aria-expanded="false" aria-controls="rsvp-suggestions" aria-describedby="rsvp-search-status" />
-              <ul id="rsvp-suggestions" class="rsvp-suggestions" role="listbox" aria-label="Nomes encontrados" hidden></ul>
+              <ul id="rsvp-suggestions" class="rsvp-suggestions" role="listbox" aria-label="Nomes encontrados" hidden>
+              </ul>
             </div>
             <div class="form-grid__full">
               <button class="button button--solid" type="submit">Buscar nomes</button>
               <p id="rsvp-search-status" class="status-message" aria-live="polite"></p>
             </div>
           </form>
-          <p class="rsvp-hint">Não encontrou? Tente seu sobrenome ou o nome de um familiar, ou fale com a gente pelo WhatsApp.</p>
+          <p class="rsvp-hint">Não encontrou? Tente seu sobrenome ou o nome de um familiar, ou fale com a gente pelo
+            WhatsApp.</p>
         </div>
 
         <div class="rsvp-step rsvp-step--hidden" id="rsvp-encerrado">
           <h3 class="rsvp-confirm__title">Confirmações encerradas</h3>
-          <p>O prazo para confirmar presença terminou em 17 de outubro. Se precisar falar com a gente, chama no WhatsApp.</p>
+          <p>O prazo para confirmar presença terminou em 17 de outubro. Se precisar falar com a gente, chama no
+            WhatsApp.</p>
         </div>
 
         <div class="rsvp-step rsvp-step--hidden" id="rsvp-erro">
@@ -147,7 +150,8 @@
           <div class="rsvp-member-list" id="rsvp-member-list"></div>
           <p class="status-message" id="rsvp-saved-msg" aria-live="polite"></p>
           <p class="rsvp-hint">
-            Responda por cada pessoa acima. Pode mudar de ideia — é só voltar ao site, buscar seu nome e trocar a resposta.
+            Responda por cada pessoa acima. Pode mudar de ideia — é só voltar ao site, buscar seu nome e trocar a
+            resposta.
           </p>
           <button class="button button--ghost" id="rsvp-change" type="button">Buscar outro convite</button>
         </div>
@@ -320,7 +324,8 @@
       <div class="messages__layout">
         <div>
           <form class="panel form-grid" id="message-form">
-            <p class="form-grid__full">Todo mundo pode deixar um carinho por aqui. Assine com seu nome ou com o apelido que usa com a gente. 💛</p>
+            <p class="form-grid__full">Todo mundo pode deixar um carinho por aqui. Assine com seu nome ou com o apelido
+              que usa com a gente. 💛</p>
             <label>
               Seu nome ou apelido
               <input id="message-name" name="messageName" type="text" autocomplete="name"

@@ -56,13 +56,13 @@ export const LOCAIS = [
     {
         id: "festa",
         tipo: "Recepção",
-        nome: "Salão DCG — Sogipa",
-        endereco: "R. Dona Leopoldina — São João, Porto Alegre — RS",
+        nome: "Exxplêndido Festas e Eventos",
+        endereco: "Av. Pres. Getúlio Vargas, 5436 — Alvorada — RS",
         horario: "logo após a cerimônia",
-        nota: "Estacionamento na entrada do salão. É onde a festa acontece de verdade.",
+        nota: "É onde a festa acontece de verdade.",
         imagem: "./assets/venue-party.webp",
         imagemFallback: "./assets/venue-party.jpg",
-        mapa: "Sogipa, R. Dona Leopoldina, São João, Porto Alegre - RS, 90550-130"
+        mapa: "Exxplêndido Festas e Eventos, Av. Pres. Getúlio Vargas, 5436 - Alvorada - RS"
     }
 ];
 /* ---------- Presentes ---------- */

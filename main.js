@@ -1,5 +1,5 @@
-import { CASAMENTO, FOTOS, FOTOS_TEXTO, INFORMACOES, LOCAIS, PIX, PRESENTES } from "./config.js?v=7875eab3";
-import { buscarConvite, sugerirConvidados, listarRecados, publicarRecado, salvarConfirmacao, supabaseConfigurado } from "./supabase.js?v=060090c5";
+import { CASAMENTO, FOTOS, FOTOS_TEXTO, INFORMACOES, LOCAIS, PIX, PRESENTES } from "./config.js?v=5fc822cf";
+import { buscarConvite, sugerirConvidados, listarRecados, publicarRecado, salvarConfirmacao, supabaseConfigurado } from "./supabase.js?v=99d607dc";
 /* =========================================================
    Utilidades
    ========================================================= */
@@ -44,7 +44,8 @@ const svgIcone = (nome) => {
 const moeda = (valor) => new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
-    maximumFractionDigits: 0
+    minimumFractionDigits: Number.isInteger(valor) ? 0 : 2,
+    maximumFractionDigits: 2
 }).format(valor);
 const dataCurta = (iso) => new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "short" }).format(new Date(iso));
 const semMovimento = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;

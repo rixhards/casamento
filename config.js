@@ -90,9 +90,9 @@ export const PRESENTES = [
     },
     {
         id: "estatueta",
-        titulo: "Uma estatueta de anime",
+        titulo: "Bonequinho de anime para o noivo",
         descricao: "O Richard vai começar a coleção. A Ana vai fingir que aprova. Todo mundo sai ganhando.",
-        valor: 180,
+        valor: 300,
         emoji: "🗿"
     },
     {
@@ -124,11 +124,11 @@ export const PRESENTES = [
         emoji: "🍿"
     },
     {
-        id: "sofa",
-        titulo: "Cota do sofá",
-        descricao: "Precisa caber dois adultos, um cobertor e o controle remoto no meio.",
-        valor: 500,
-        emoji: "🛋️"
+        id: "rancho",
+        titulo: "O primeiro rancho do casal",
+        descricao: "Ajude a gente a abastecer a geladeira. Apenas com o essencial, sem besteiras (por mais que a noiva tente convencer o noivo a comprar um mm's pra ela...).",
+        valor: 200,
+        emoji: "🛒"
     },
     {
         id: "pizza",
@@ -143,6 +143,76 @@ export const PRESENTES = [
         descricao: "Se preferir o clássico sem piada, essa aqui é a sua.",
         valor: 300,
         emoji: "✈️"
+    },
+    {
+        id: "surto-financeiro",
+        titulo: "Patrocine nosso primeiro surto financeiro",
+        descricao: "Para quando abrimos o aplicativo do banco depois de uma compra no mercado e descobrimos que o amor é lindo, mas o saldo é limitado.",
+        valor: 150,
+        emoji: "😱"
+    },
+    {
+        id: "serasa",
+        titulo: "Ajude o casal a sair do Serasa antes dos 30",
+        descricao: "Uma contribuição para manter nossos nomes limpos, nossos sonhos vivos e nossos cartões longe do limite.",
+        valor: 1000,
+        emoji: "💳"
+    },
+    {
+        id: "maquina-de-lavar",
+        titulo: "Terapia para a nossa máquina de lavar",
+        descricao: "Ela trabalha mais que nós dois juntos e ainda precisa lidar com meias desaparecidas. Ajude nossa guerreira!",
+        valor: 180,
+        emoji: "🧺"
+    },
+    {
+        id: "delivery",
+        titulo: "Patrocine o delivery de emergência",
+        descricao: "Para aquelas noites em que a fome chega, a disposição vai embora e a cozinha parece estar a quilômetros de distância.",
+        valor: 70,
+        emoji: "🛵"
+    },
+    {
+        id: "sim-amor",
+        titulo: 'Fundo "sim, amor, você tem razão"',
+        descricao: "Uma reserva estratégica para ser utilizada em momentos de tensão, independentemente de quem realmente esteja certo.",
+        valor: 120,
+        emoji: "🏳️"
+    },
+    {
+        id: "volei",
+        titulo: "Uma partida de vôlei sem lesões",
+        descricao: "Para o Richard reunir os amigos, jogar aquela partida e voltar para casa inteiro, porque agora tem uma esposa esperando.",
+        valor: 20,
+        emoji: "🏐"
+    },
+    {
+        id: "detector",
+        titulo: "Um detector de coisas que o Richard não encontra",
+        descricao: "Chaves, carteira, celular e tudo aquilo que está bem na frente dele. Tecnologia de ponta para um problema diário.",
+        valor: 50,
+        emoji: "🔍"
+    },
+    {
+        id: "pode-comprar",
+        titulo: 'Um vale "pode comprar, amor"',
+        descricao: "Uma autorização oficial para comprar alguma coisa sem precisar apresentar justificativa, orçamento e defesa de TCC.",
+        valor: 5000,
+        emoji: "🛍️"
+    },
+    {
+        id: "multiplayer",
+        titulo: "Multiplayer do amor",
+        descricao: "Para o casal jogar junto, dar boas risadas e descobrir que perder para o próprio marido pode ser um teste de resistência emocional.",
+        valor: 249.9,
+        emoji: "🎮"
+    },
+    {
+        id: "campanha",
+        titulo: "A campanha: Felizes para Sempre",
+        descricao: "Após anos de aventuras individuais, dois heróis decidiram formar um grupo permanente. Ajude a financiar a campanha mais importante de suas vidas: o casamento!",
+        valor: 71120.26,
+        emoji: "⚔️"
     }
 ];
 /* ---------- Fotos do carrossel ----------

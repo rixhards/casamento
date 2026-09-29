@@ -1,5 +1,5 @@
-import { CASAMENTO, FOTOS, FOTOS_TEXTO, INFORMACOES, LOCAIS, PIX, PRESENTES } from "./config.js?v=5fc822cf";
-import { buscarConvite, sugerirConvidados, listarRecados, publicarRecado, salvarConfirmacao, supabaseConfigurado } from "./supabase.js?v=99d607dc";
+import { CASAMENTO, FOTOS, FOTOS_TEXTO, INFORMACOES, LOCAIS, PIX, PRESENTES } from "./config.js?v=2ed6d520";
+import { buscarConvite, sugerirConvidados, listarRecados, publicarRecado, salvarConfirmacao, supabaseConfigurado } from "./supabase.js?v=3f8db7a8";
 /* =========================================================
    Utilidades
    ========================================================= */

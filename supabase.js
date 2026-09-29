@@ -1,4 +1,4 @@
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from "./config.js?v=5fc822cf";
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from "./config.js?v=2ed6d520";
 export const supabaseConfigurado = () => /^https?:\/\//.test(SUPABASE_URL) &&
     !SUPABASE_ANON_KEY.includes("__SUPABASE_") && SUPABASE_ANON_KEY.length > 20;
 export const rpc = async (funcao, args, acesso) => {

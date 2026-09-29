@@ -127,7 +127,7 @@ export const PRESENTES = [
         id: "rancho",
         titulo: "O primeiro rancho do casal",
         descricao: "Ajude a gente a abastecer a geladeira. Apenas com o essencial, sem besteiras (por mais que a noiva tente convencer o noivo a comprar um mm's pra ela...).",
-        valor: 200,
+        valor: 600,
         emoji: "🛒"
     },
     {

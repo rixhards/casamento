@@ -31,14 +31,20 @@ export const INFORMACOES = [
         texto: "Traje social. Escolha uma roupa elegante e confortável para celebrar com a gente."
     },
     {
-        icone: "kids",
-        titulo: "Crianças",
-        texto: "Bem-vindas, claro. Se os pequenos estão no convite, estão convidados — traga a família inteira."
-    },
-    {
         icone: "car",
         titulo: "Estacionamento",
-        texto: "Na igreja e no salão não há estacionamento próprio; dá para deixar o carro nas ruas ao redor."
+        texto: "Nem a igreja nem o salão têm estacionamento próprio. Dá para deixar o carro nas ruas ao redor."
+    },
+    {
+        icone: "heart",
+        titulo: "Viver bem esse momento especial",
+        texto: "Algumas dicas para aproveitar o dia do começo ao fim:",
+        dicas: [
+            "Faça um lanche antes de sair de casa. A cerimônia é uma missa e pode ser um pouco demorada.",
+            "Durante a missa, participe dos cantos e das respostas. Vai ser bonito ter todo mundo rezando e cantando com a gente.",
+            "Deixe o celular desligado ou no silencioso durante a cerimônia, para viver cada momento com calma.",
+            "Na festa, aproveite tudo: a pista, a comida e a bebida. Cada detalhe foi pensado por nós com muito amor e carinho."
+        ]
     }
 ];
 export const LOCAIS = [
@@ -48,7 +54,7 @@ export const LOCAIS = [
         nome: "Paróquia São José do Sarandi",
         endereco: "Av. Assis Brasil, 6400 — Sarandi, Porto Alegre — RS",
         horario: "20h",
-        nota: "Cerimônia religiosa. Não há estacionamento próprio: as ruas do entorno costumam ter vaga.",
+        nota: "Cerimônia religiosa. Não há estacionamento próprio, mas as ruas do entorno costumam ter vaga.",
         imagem: "./assets/venue-church.webp?v=bc44319c",
         imagemFallback: "./assets/venue-church.jpg?v=06534c0f",
         mapa: "Paróquia São José, Av. Assis Brasil, 6400 - Sarandi, Porto Alegre - RS, 91140-000"
@@ -59,10 +65,9 @@ export const LOCAIS = [
         nome: "Exxplêndido Festas e Eventos",
         endereco: "Av. Pres. Getúlio Vargas, 5408 — Maria Regina, Alvorada — RS",
         horario: "por volta das 21h30",
-        nota: "O salão ainda não tem número próprio: o 5408 é da academia que fica ao lado. É onde a festa acontece de verdade.",
+        nota: "O salão ainda não tem número, o 5408 é da academia bem ao lado. Vocês verão o Exxplendido quando chegarem lá",
         imagem: "./assets/venue-party.webp?v=6152c030",
         imagemFallback: "./assets/venue-party.jpg?v=c6a67538",
-        // O salão ainda não tem número: o mapa aponta para a academia ao lado (5408).
         mapa: "Av. Pres. Getúlio Vargas, 5408 - Maria Regina, Alvorada - RS"
     }
 ];

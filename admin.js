@@ -1,5 +1,5 @@
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from "./config.js";
-import { rpc, supabaseConfigurado } from "./supabase.js";
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from "./config.js?v=7875eab3";
+import { rpc, supabaseConfigurado } from "./supabase.js?v=060090c5";
 const campo = (id) => document.getElementById(id);
 const status = (texto) => { campo("admin-status").textContent = texto; };
 const normalizar = (v) => v.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();

@@ -1462,7 +1462,7 @@ textarea {
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.1rem;
 }
 
@@ -1506,9 +1506,9 @@ textarea {
   color: var(--muted);
 }
 
-@media (max-width: 980px) {
+@media (max-width: 760px) {
   .info-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1851,4 +1851,35 @@ textarea {
   .carousel__thumbs { display: flex; grid-template-columns: none; }
   .carousel__thumb { flex-basis: 68px; }
   .carousel__thumb img { height: 58px; }
+}
+
+/* --- Card de dicas (largura toda) --- */
+.info-card--dicas { grid-column: 1 / -1; }
+.info-card__dicas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem 2rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.info-card__dicas li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.info-card__dicas li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+@media (max-width: 760px) {
+  .info-card__dicas { grid-template-columns: 1fr; }
 }

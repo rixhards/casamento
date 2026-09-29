@@ -1,5 +1,5 @@
-import { CASAMENTO, FOTOS, FOTOS_TEXTO, INFORMACOES, LOCAIS, PIX, PRESENTES } from "./config.js";
-import { buscarConvite, sugerirConvidados, listarRecados, publicarRecado, salvarConfirmacao, supabaseConfigurado } from "./supabase.js";
+import { CASAMENTO, FOTOS, FOTOS_TEXTO, INFORMACOES, LOCAIS, PIX, PRESENTES } from "./config.js?v=7875eab3";
+import { buscarConvite, sugerirConvidados, listarRecados, publicarRecado, salvarConfirmacao, supabaseConfigurado } from "./supabase.js?v=060090c5";
 /* =========================================================
    Utilidades
    ========================================================= */
@@ -25,7 +25,8 @@ const svgIcone = (nome) => {
         clock: "M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z",
         dress: "M12 5.2a2 2 0 1 1 2 2c-1.1 0-2 .7-2 1.8M12 9 4.1 15.3c-.9.7-.4 2.2.7 2.2h14.4c1.1 0 1.6-1.5.7-2.2L12 9Z",
         kids: "M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM4 21c0-3 2.2-5 5-5s5 2 5 5M17 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM15 21c0-2 1-3.5 2.5-3.5S20 19 20 21",
-        car: "M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM4 17H3v-4l2-5h14l2 5v4h-1M9 17h6M3 13h18"
+        car: "M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM4 17H3v-4l2-5h14l2 5v4h-1M9 17h6M3 13h18",
+        heart: "M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"
     };
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("viewBox", "0 0 24 24");
@@ -118,7 +119,7 @@ const montarInformacoes = () => {
     const grade = $("#info-grid");
     if (!grade)
         return;
-    grade.replaceChildren(...INFORMACOES.map((info) => el("article", { class: "info-card" }, el("div", { class: "info-card__icon" }, svgIcone(info.icone)), el("h3", {}, info.titulo), el("p", {}, info.texto))));
+    grade.replaceChildren(...INFORMACOES.map((info) => el("article", { class: info.dicas ? "info-card info-card--dicas" : "info-card" }, el("div", { class: "info-card__icon" }, svgIcone(info.icone)), el("h3", {}, info.titulo), el("p", {}, info.texto), info.dicas ? el("ul", { class: "info-card__dicas" }, ...info.dicas.map((dica) => el("li", {}, dica))) : null)));
 };
 /* =========================================================
    Locais

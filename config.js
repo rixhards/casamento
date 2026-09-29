@@ -85,7 +85,7 @@ export const PRESENTES = [
         id: "internet",
         titulo: "5 primeiros meses de internet",
         descricao: "Para o casal brigar por causa do Wi-Fi, e não por causa da falta dele.",
-        valor: 350,
+        valor: 600,
         emoji: "📡"
     },
     {
@@ -140,8 +140,8 @@ export const PRESENTES = [
     {
         id: "lua-de-mel",
         titulo: "Cota da lua de mel",
-        descricao: "Se preferir o clássico sem piada, essa aqui é a sua.",
-        valor: 300,
+        descricao: "Esse não tem piada, a gente só quer viajar mesmo.",
+        valor: 30.000,
         emoji: "✈️"
     },
     {

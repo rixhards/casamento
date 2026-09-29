@@ -23,12 +23,12 @@ export const INFORMACOES = [
     {
         icone: "clock",
         titulo: "Horário",
-        texto: "A cerimônia começa às 20h, no horário de Brasília. Chegue com 30 minutos de antecedência para escolher o lugar com calma."
+        texto: "A cerimônia começa às 20h. Chegue com 30 minutos de antecedência para escolher o lugar com calma."
     },
     {
         icone: "dress",
         titulo: "Traje",
-        texto: "Traje social. Terno para eles, vestido para elas — sem precisar de gravata se o calor apertar."
+        texto: "Traje social. Escolha uma roupa elegante e confortável para celebrar com a gente."
     },
     {
         icone: "kids",
@@ -38,14 +38,14 @@ export const INFORMACOES = [
     {
         icone: "car",
         titulo: "Estacionamento",
-        texto: "Na igreja não há estacionamento próprio; dá para deixar o carro nas ruas ao redor. Na festa, o estacionamento fica na entrada do salão."
+        texto: "Na igreja e no salão não há estacionamento próprio; dá para deixar o carro nas ruas ao redor."
     }
 ];
 export const LOCAIS = [
     {
         id: "igreja",
         tipo: "Cerimônia",
-        nome: "Paróquia São José",
+        nome: "Paróquia São José do Sarandi",
         endereco: "Av. Assis Brasil, 6400 — Sarandi, Porto Alegre — RS",
         horario: "20h",
         nota: "Cerimônia religiosa. Não há estacionamento próprio: as ruas do entorno costumam ter vaga.",
@@ -57,13 +57,13 @@ export const LOCAIS = [
         id: "festa",
         tipo: "Recepção",
         nome: "Exxplêndido Festas e Eventos",
-        endereco: "Av. Pres. Getúlio Vargas, 5436 — Alvorada — RS",
-        horario: "logo após a cerimônia",
-        nota: "É onde a festa acontece de verdade.",
+        endereco: "Av. Pres. Getúlio Vargas, 5408 — Maria Regina, Alvorada — RS",
+        horario: "por volta das 21h30",
+        nota: "O salão ainda não tem número próprio: o 5408 é da academia que fica ao lado. É onde a festa acontece de verdade.",
         imagem: "./assets/venue-party.webp?v=6152c030",
         imagemFallback: "./assets/venue-party.jpg?v=c6a67538",
-        // Nome e número exatamente como estão no Google Maps, para o pino cair no salão certo.
-        mapa: "Exxplendido eventos, Av. Pres. Getúlio Vargas, 5430 - Maria Regina, Alvorada - RS"
+        // O salão ainda não tem número: o mapa aponta para a academia ao lado (5408).
+        mapa: "Av. Pres. Getúlio Vargas, 5408 - Maria Regina, Alvorada - RS"
     }
 ];
 /* ---------- Presentes ---------- */

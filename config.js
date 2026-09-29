@@ -103,13 +103,6 @@ export const PRESENTES = [
         emoji: "💆"
     },
     {
-        id: "cafe",
-        titulo: "Fundo do café de sábado de manhã",
-        descricao: "Aquele café demorado, sem pressa, que é praticamente um plano de vida.",
-        valor: 80,
-        emoji: "☕"
-    },
-    {
         id: "panela",
         titulo: "A panela que vamos queimar primeiro",
         descricao: "Sabemos que vai acontecer. Preferimos estar preparados.",

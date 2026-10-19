@@ -17,7 +17,7 @@ export const CASAMENTO = {
     horaCerimonia: "20h",
     cidade: "Porto Alegre — RS",
     /** Depois deste momento o site e o banco param de aceitar respostas. */
-    prazoConfirmacao: "2026-10-18T23:59:59-03:00"
+    prazoConfirmacao: "2026-10-20T23:59:59-03:00"
 };
 export const INFORMACOES = [
     {
